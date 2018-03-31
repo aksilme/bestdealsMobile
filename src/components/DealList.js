@@ -13,6 +13,7 @@ export default class DealList extends React.Component{
                 <FlatList
                     data={this.props.deals}
                     renderItem={({item}) => <CardItem deal={item} />}
+                    keyExtractor={item=> item.id}
                 />
             </View>
 

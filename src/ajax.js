@@ -1,9 +1,9 @@
-const homeUrl = 'https://hn.algolia.com';
+const homeUrl = 'https://jsonplaceholder.typicode.com';
 //https://.bakesaleforgoodcom'
 export default {
     async fetchInitialDeals(){
         try {
-            const response = await fetch(homeUrl + '/api/v1/items/1');
+            const response = await fetch(homeUrl + '/posts');
             const responseJson = await response.json();
             return responseJson;
         } catch (error) {
